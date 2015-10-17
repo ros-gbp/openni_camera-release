@@ -1,6 +1,6 @@
 <package>
   <name>openni_camera</name>
-  <version>1.9.2</version>
+  <version>1.9.3</version>
     <description>
     A ROS driver for OpenNI depth (+ RGB) cameras. These include: 
        Microsoft Kinect,
@@ -12,7 +12,7 @@
   <author>Patrick Mihelich</author>
   <author>Suat Gedikli</author>
   <author>Radu Bogdan Rusu</author>
-  <maintainer email="jkammerl@willowgarage.com">Julius Kammerl</maintainer>
+  <maintainer email="130s@2000.jukuin.keio.ac.jp">Isaac I.Y. Saito</maintainer>
   <license>BSD</license>
   
   <url type="website">http://www.ros.org/wiki/openni_camera</url>
