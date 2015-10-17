@@ -239,8 +239,11 @@ void DriverNodelet::setupDevice ()
 
     try {
       string device_id;
-      if (!getPrivateNodeHandle().getParam("device_id", device_id))
+      int device_id_int;
+      if (!getPrivateNodeHandle().getParam("device_id", device_id) &&
+          !getPrivateNodeHandle().getParam("device_id", device_id_int))
       {
+        
         NODELET_WARN ("~device_id is not set! Using first device.");
         device_ = driver.getDeviceByIndex (0);
       }
@@ -260,6 +263,12 @@ void DriverNodelet::setupDevice ()
       }
       else
       {
+        if (device_id.empty()) // The ID passed contains only numbers
+        {  
+            std::stringstream ss;
+            ss << device_id_int;
+            device_id = ss.str();
+        }
         NODELET_INFO ("Searching for device with serial number = '%s'", device_id.c_str ());
         device_ = driver.getDeviceBySerialNumber (device_id);
       }
@@ -520,7 +529,7 @@ void DriverNodelet::publishRgbImage(const openni_wrapper::Image& image, ros::Tim
   }
   catch ( OpenNIException e )
   {
-    ROS_ERROR_THROTTLE(1,e.what());
+    ROS_ERROR_THROTTLE(1,"%s",e.what());
   }
   
   pub_rgb_.publish(rgb_msg, getRgbCameraInfo(rgb_msg->width,rgb_msg->height,time));
@@ -546,7 +555,7 @@ void DriverNodelet::publishDepthImage(const openni_wrapper::DepthImage& depth, r
   }
   catch ( OpenNIException e )
   {
-    ROS_ERROR_THROTTLE(1,e.what());
+    ROS_ERROR_THROTTLE(1,"%s",e.what());
   }
 
   if (fabs(z_scaling_ - 1.0) > 1e-6)
@@ -602,7 +611,7 @@ void DriverNodelet::publishIrImage(const openni_wrapper::IRImage& ir, ros::Time 
   }
   catch ( OpenNIException e )
   {
-    ROS_ERROR_THROTTLE(1,e.what());
+    ROS_ERROR_THROTTLE(1,"%s",e.what());
   }
 
   pub_ir_.publish(ir_msg, getIrCameraInfo(ir.getWidth(), ir.getHeight(), time));
