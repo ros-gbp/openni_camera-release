@@ -1,3 +1,24 @@
+## openni_camera (indigo) - 1.9.4-3
+
+The packages in the `openni_camera` repository were released into the `indigo` distro by running `/usr/bin/bloom-release --rosdistro indigo --track indigo openni_camera` on `Wed, 16 Dec 2015 17:14:42 -0000`
+
+The `openni_camera` package was released.
+
+Version of package(s) in repository `openni_camera`:
+- upstream repository: https://github.com/ros-drivers/openni_camera.git
+- release repository: https://github.com/ros-gbp/openni_camera-release.git
+- rosdistro version: `1.9.3-0`
+- old version: `1.9.4-2`
+- new version: `1.9.4-3`
+
+Versions of tools used:
+- bloom version: `0.5.20`
+- catkin_pkg version: `0.2.10`
+- rosdep version: `0.11.4`
+- rosdistro version: `0.4.2`
+- vcstools version: `0.1.38`
+
+
 ## openni_camera (indigo) - 1.9.4-2
 
 The packages in the `openni_camera` repository were released into the `indigo` distro by running `/usr/bin/bloom-release --rosdistro indigo --track indigo openni_camera` on `Wed, 16 Dec 2015 16:55:24 -0000`
