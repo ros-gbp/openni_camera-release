@@ -1,3 +1,26 @@
+## openni_camera (kinetic) - 1.9.5-1
+
+The packages in the `openni_camera` repository were released into the `kinetic` distro by running `/usr/bin/bloom-release --rosdistro kinetic --track kinetic openni_camera` on `Sat, 07 May 2016 15:36:23 -0000`
+
+The `openni_camera` package was released.
+
+Version of package(s) in repository `openni_camera`:
+
+- upstream repository: https://github.com/ros-drivers/openni_camera.git
+- release repository: https://github.com/ros-gbp/openni_camera-release.git
+- rosdistro version: `1.9.5-0`
+- old version: `1.9.5-0`
+- new version: `1.9.5-1`
+
+Versions of tools used:
+
+- bloom version: `0.5.21`
+- catkin_pkg version: `0.2.10`
+- rosdep version: `0.11.4`
+- rosdistro version: `0.4.7`
+- vcstools version: `0.1.38`
+
+
 ## openni_camera (kinetic) - 1.9.5-0
 
 The packages in the `openni_camera` repository were released into the `kinetic` distro by running `/usr/bin/bloom-release --rosdistro kinetic --track kinetic openni_camera` on `Sun, 03 Apr 2016 21:00:56 -0000`
