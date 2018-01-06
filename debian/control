@@ -1,0 +1,13 @@
+Source: ros-kinetic-openni-camera
+Section: misc
+Priority: extra
+Maintainer: Isaac I.Y. Saito <130s@2000.jukuin.keio.ac.jp>
+Build-Depends: debhelper (>= 9.0.0), liblog4cxx10-dev, libopenni-dev, libusb-1.0-0-dev, ros-kinetic-camera-info-manager, ros-kinetic-catkin, ros-kinetic-dynamic-reconfigure, ros-kinetic-image-transport, ros-kinetic-nodelet, ros-kinetic-roscpp, ros-kinetic-sensor-msgs
+Homepage: http://www.ros.org/wiki/openni_camera
+Standards-Version: 3.9.2
+
+Package: ros-kinetic-openni-camera
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, liblog4cxx10-dev, libopenni-dev, libusb-1.0-0-dev, ros-kinetic-camera-info-manager, ros-kinetic-dynamic-reconfigure, ros-kinetic-image-transport, ros-kinetic-nodelet, ros-kinetic-roscpp, ros-kinetic-sensor-msgs
+Description: A ROS driver for OpenNI depth (+ RGB) cameras.
+ These include: Microsoft Kinect, PrimeSense PSDK, ASUS Xtion Pro and Pro Live The driver publishes raw depth, RGB, and IR image streams.

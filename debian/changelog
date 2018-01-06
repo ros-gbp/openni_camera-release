@@ -1,0 +1,129 @@
+ros-kinetic-openni-camera (1.10.0-0jessie) jessie; urgency=high
+
+  * Copying the entire openni_launch package from https://github.com/ros-drivers/openni_launch. #57 <https://github.com/ros-drivers/openni_camera/issues/57>
+  * Contributors: Isaac I.Y. Saito
+
+ -- Isaac I.Y. Saito <130s@2000.jukuin.keio.ac.jp>  Sat, 06 Jan 2018 08:00:00 -0000
+
+ros-kinetic-openni-camera (1.9.5-0jessie) jessie; urgency=high
+
+  * [feat] Updated max drop rate
+  * [sys] Added log4cxx missing explicit linkage #44 <https://github.com/ros-drivers/openni_camera/issues/44>
+  * Contributors: Francois-Michel De Rainville, Isaac IY Saito, Leopold Palomo-Avellaneda, Isaac I.Y. Saito
+
+ -- Isaac I.Y. Saito <130s@2000.jukuin.keio.ac.jp>  Thu, 31 Mar 2016 07:00:00 -0000
+
+ros-kinetic-openni-camera (1.9.4-0jessie) jessie; urgency=high
+
+  * Remove unneeded dependency (libopenni-sensor-primesense-dev is an internal plugin).
+  * Contributors: Jochen Sprickerhof
+
+ -- Isaac I.Y. Saito <130s@2000.jukuin.keio.ac.jp>  Tue, 27 Oct 2015 07:00:00 -0000
+
+ros-kinetic-openni-camera (1.9.3-0jessie) jessie; urgency=high
+
+  * [fix] Remove several using namespace std
+    - They cause compilation failure (on OS X 10.9 with clang defaulting
+    to C++11)
+    - Failure occurs because unique_lock and friends is both in namespace
+    std and namespace boost.
+  * [fix] Don't pass unsafe strings as format strings for printing
+    Doing so causes build errors under -Werror=format-security. If there
+    were to be a % (percent symbol) in the exception string (whether
+    intentional, malicious or otherwise), the print function could
+    expose memory or cause segfaults.
+  * [fix] #28 <https://github.com/ros-drivers/openni_camera/issues/28>, properly parse device_id with only numbers
+    The fix checks wherever an string device_id parameter is set
+    or a device_id integer parameter is set. If both are missing
+    it opens the first device found. If integer device_id is set
+    then it parses it to string and load continues as if string
+    version was set.
+  * [sys] Add travis config for indigo, jade
+  * [sys] Update maintainer
+  * Contributors: Emili Boronat, Nikolaus Demmel, Scott K Logan, Isaac I.Y. Saito
+
+ -- Isaac I.Y. Saito <130s@2000.jukuin.keio.ac.jp>  Sat, 17 Oct 2015 07:00:00 -0000
+
+ros-kinetic-openni-camera (1.9.2-0jessie) jessie; urgency=high
+
+  * adding missing include of log4cxx/logger.h previously transitively included.
+  * Contributors: Tully Foote
+
+ -- Isaac I.Y. Saito <130s@2000.jukuin.keio.ac.jp>  Fri, 17 Jan 2014 08:00:00 -0000
+
+ros-kinetic-openni-camera (1.9.1-0jessie) jessie; urgency=high
+
+  * add explicit dependency on log4cxx (#21 <https://github.com/ros-drivers/openni_camera/issues/21>)
+  * Contributors: Jack O'Quin
+
+ -- Isaac I.Y. Saito <130s@2000.jukuin.keio.ac.jp>  Fri, 17 Jan 2014 08:00:00 -0000
+
+ros-kinetic-openni-camera (1.9.0-0jessie) jessie; urgency=high
+
+
+
+ -- Isaac I.Y. Saito <130s@2000.jukuin.keio.ac.jp>  Thu, 27 Jun 2013 20:39:00 -0000
+
+ros-kinetic-openni-camera (1.8.9-0jessie) jessie; urgency=high
+
+  * Merge pull request #16 <https://github.com/ros-drivers/openni_camera/issues/16> from forouher/asus-serial
+    ASUS xtion: use serial number
+  * Merge pull request #17 <https://github.com/ros-drivers/openni_camera/issues/17> from jkammerl/flicker-patch
+    another attempt to fix depth image flickering
+  * access image data via WritableData()
+  * deep&safe copy of image,ir,depth images
+  * adding libusb to library target
+  * workaround: remove some calls that segfault later
+    unless this patch is applied, the driver will segfault later
+    when querying the prime sense serial id.
+    the fact that this patch is necessary is somewhat fishy and
+    an indication that the other patches are probably not quite
+    correct.
+  * openni_driver: return prime sense serial id
+  * Merge pull request #14 <https://github.com/ros-drivers/openni_camera/issues/14> from stwirth/z_scaling
+    Depth scaling parameter
+  * added depth scaling parameter
+  * Merge pull request #12 <https://github.com/ros-drivers/openni_camera/issues/12> from dgossow/groovy-devel
+    [bugfix] add exception handling
+  * fixed typo
+  * added exception handling for fill*Image
+  * Merge pull request #10 <https://github.com/ros-drivers/openni_camera/issues/10> from dgossow/groovy-devel
+    [bugfix] Publish reasonable camera info when changing depth resolution.
+  * Merge pull request #9 <https://github.com/ros-drivers/openni_camera/issues/9> from jkammerl/groovy-devel
+    adding check to make sure dynamic reconfigure has been called before mes...
+  * [bugfix] Publish reasonable camera info when changing depth resolution.
+  * adding check to make sure dynamic reconfigure has been called before message generation
+  * Merge pull request #8 <https://github.com/ros-drivers/openni_camera/issues/8> from jkammerl/groovy-devel
+    fixing late dynamic_reconfigure initialization
+  * fixing late dynamic_reconfigure initialization
+  * Contributors: Dariush Forouher, David Gossow, Julius Kammerl, Stephan Wirth, jonbinney
+
+ -- Isaac I.Y. Saito <130s@2000.jukuin.keio.ac.jp>  Thu, 27 Jun 2013 22:14:00 -0000
+
+ros-kinetic-openni-camera (1.8.8-0jessie) jessie; urgency=high
+
+  * switching to 1.8.8
+  * Contributors: Julius Kammerl
+
+ -- Isaac I.Y. Saito <130s@2000.jukuin.keio.ac.jp>  Tue, 08 Jan 2013 08:00:00 -0000
+
+ros-kinetic-openni-camera (1.8.7-0jessie) jessie; urgency=high
+
+  * fix the export
+  * Contributors: Vincent Rabaud
+
+ -- Isaac I.Y. Saito <130s@2000.jukuin.keio.ac.jp>  Fri, 04 Jan 2013 08:00:00 -0000
+
+ros-kinetic-openni-camera (1.8.6-0jessie) jessie; urgency=high
+
+  * catkin fixes
+  * removing stack.xml from groovy-branch
+  * catkinizing openni_camera
+  * removing .hgtags
+  * fixing variable evaluation
+  * patching cmake to use pkg-config
+  * new rosdeps
+
+ -- Isaac I.Y. Saito <130s@2000.jukuin.keio.ac.jp>  Thu, 03 Jan 2013 08:00:00 -0000
+
+
