@@ -1,0 +1,13 @@
+Source: ros-melodic-openni-camera
+Section: misc
+Priority: extra
+Maintainer: Isaac I.Y. Saito <130s@2000.jukuin.keio.ac.jp>
+Build-Depends: debhelper (>= 9.0.0), liblog4cxx-dev, libopenni-dev, libusb-1.0-0-dev, ros-melodic-camera-info-manager, ros-melodic-catkin, ros-melodic-dynamic-reconfigure, ros-melodic-image-transport, ros-melodic-nodelet, ros-melodic-roscpp, ros-melodic-sensor-msgs
+Homepage: http://www.ros.org/wiki/openni_camera
+Standards-Version: 3.9.2
+
+Package: ros-melodic-openni-camera
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, liblog4cxx-dev, libopenni-dev, libusb-1.0-0-dev, ros-melodic-camera-info-manager, ros-melodic-dynamic-reconfigure, ros-melodic-image-transport, ros-melodic-nodelet, ros-melodic-roscpp, ros-melodic-sensor-msgs
+Description: A ROS driver for OpenNI depth (+ RGB) cameras.
+ These include: Microsoft Kinect, PrimeSense PSDK, ASUS Xtion Pro and Pro Live The driver publishes raw depth, RGB, and IR image streams.
