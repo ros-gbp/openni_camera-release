@@ -1,3 +1,29 @@
+## openni_camera (lunar) - 1.11.1-0
+
+The packages in the `openni_camera` repository were released into the `lunar` distro by running `/usr/bin/bloom-release --rosdistro lunar --track lunar openni_camera` on `Thu, 13 Sep 2018 09:01:41 -0000`
+
+These packages were released:
+- `openni_camera`
+- `openni_description`
+- `openni_launch`
+
+Version of package(s) in repository `openni_camera`:
+
+- upstream repository: https://github.com/ros-drivers/openni_camera.git
+- release repository: https://github.com/ros-gbp/openni_camera-release.git
+- rosdistro version: `1.10.0-0`
+- old version: `1.9.5-0`
+- new version: `1.11.1-0`
+
+Versions of tools used:
+
+- bloom version: `0.6.6`
+- catkin_pkg version: `0.4.8`
+- rosdep version: `0.12.2`
+- rosdistro version: `0.6.9`
+- vcstools version: `0.1.40`
+
+
 ## openni_camera (melodic) - 1.11.1-0
 
 The packages in the `openni_camera` repository were released into the `melodic` distro by running `/usr/bin/bloom-release --rosdistro melodic --track melodic openni_camera` on `Thu, 13 Sep 2018 08:57:35 -0000`
