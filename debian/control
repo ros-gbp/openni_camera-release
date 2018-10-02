@@ -1,0 +1,12 @@
+Source: ros-indigo-openni-description
+Section: misc
+Priority: extra
+Maintainer: Isaac I.Y. Saito <130s@2000.jukuin.keio.ac.jp>
+Build-Depends: debhelper (>= 9.0.0), liburdfdom-tools, ros-indigo-catkin, ros-indigo-rostest
+Homepage: http://www.ros.org/wiki/openni_description
+Standards-Version: 3.9.2
+
+Package: ros-indigo-openni-description
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-indigo-urdf, ros-indigo-xacro
+Description: Model files of OpenNI device.
