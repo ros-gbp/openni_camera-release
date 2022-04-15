@@ -1,0 +1,12 @@
+Source: ros-noetic-openni-description
+Section: misc
+Priority: optional
+Maintainer: Isaac I.Y. Saito <130s@2000.jukuin.keio.ac.jp>
+Build-Depends: debhelper (>= 9.0.0), liburdfdom-tools, ros-noetic-catkin, ros-noetic-rostest
+Homepage: http://www.ros.org/wiki/openni_description
+Standards-Version: 3.9.2
+
+Package: ros-noetic-openni-description
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-noetic-urdf, ros-noetic-xacro
+Description: Model files of OpenNI device.
